@@ -101,10 +101,10 @@ tabs = st.tabs(["🔎 Prediksi", "📋 Data Tersimpan", "📈 Analisis Deskripti
 with tabs[0]:
     st.subheader("📌 Hasil Prediksi")
     cols_pred = st.columns(2)
-    cols_pred[0].metric(label="🧪 Kuat Tekan 1 Hari", value=f"{kuat_tekan_1d:.2f} MPa")
-    cols_pred[1].metric(label="🧪 Kuat Tekan 3 Hari", value=f"{kuat_tekan_3d:.2f} MPa")
-    cols_pred[0].metric(label="🧪 Kuat Tekan 7 Hari", value=f"{kuat_tekan_7d:.2f} MPa")
-    cols_pred[1].metric(label="🧪 Kuat Tekan 28 Hari", value=f"{kuat_tekan_28d:.2f} MPa")
+    cols_pred[0].metric(label="🧪 Kuat Tekan 1 Hari", value=f"{kuat_tekan_1d:.2f} kg/cm²")
+    cols_pred[1].metric(label="🧪 Kuat Tekan 3 Hari", value=f"{kuat_tekan_3d:.2f} kg/cm²")
+    cols_pred[0].metric(label="🧪 Kuat Tekan 7 Hari", value=f"{kuat_tekan_7d:.2f} kg/cm²")
+    cols_pred[1].metric(label="🧪 Kuat Tekan 28 Hari", value=f"{kuat_tekan_28d:.2f} kg/cm²")
     cols_pred[0].metric(label="⏳ Setting Time Awal", value=f"{setting_time_awal:.2f} Menit")
     cols_pred[1].metric(label="⏳ Setting Time Akhir", value=f"{setting_time_akhir:.2f} Menit")
 
