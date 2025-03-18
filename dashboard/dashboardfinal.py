@@ -8,6 +8,7 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="Product Quality Assurance Dashboard", layout="wide")
 
 # Tambahkan logo di bagian atas
+st.markdown("<br>", unsafe_allow_html=True)  # Beri jarak ke bawah jika terpotong
 st.image("https://raw.githubusercontent.com/fitrifatmadewi/KP_dashboard/main/dashboard/SIG_Logo.png", width=100)
 
 # 🎨 Tambahkan Warna Latar Belakang Dashboard
