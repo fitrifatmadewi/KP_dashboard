@@ -12,21 +12,37 @@ st.markdown("<br>", unsafe_allow_html=True)  # Beri jarak ke bawah jika terpoton
 st.image("https://raw.githubusercontent.com/fitrifatmadewi/KP_dashboard/main/dashboard/SIG_Logo.png", width=100)
 
 # 🎨 Tambahkan Warna Latar Belakang Dashboard
+# 🎨 CSS agar kompatibel dengan mode terang & gelap
 st.markdown(
     """
     <style>
-    body {
-        background-color: #f4f4f4; /* Abu-abu terang agar lebih kontras */
+    :root {
+        --primary-color: #d71920; /* Merah */
+        --text-color: white; /* Warna teks di mode gelap */
+        --bg-light: white; /* Latar belakang di mode terang */
+        --bg-dark: #1e1e1e; /* Latar belakang di mode gelap */
+        --shadow: rgba(0, 0, 0, 0.2);
+    }
+    @media (prefers-color-scheme: light) {
+        body, .block-container {
+            background-color: var(--bg-light);
+            color: black;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        body, .block-container {
+            background-color: var(--bg-dark);
+            color: var(--text-color);
+        }
     }
     .block-container {
-        background-color: white;
         padding: 2rem;
         border-radius: 12px;
-        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
-        border-left: 8px solid #d71920; /* Merah */
+        box-shadow: 0px 6px 15px var(--shadow);
+        border-left: 8px solid var(--primary-color);
     }
     .stButton>button {
-        background-color: #d71920; /* Merah */
+        background-color: var(--primary-color);
         color: white;
         font-size: 16px;
         border-radius: 8px;
@@ -34,11 +50,11 @@ st.markdown(
         border: 2px solid black;
     }
     .stButton>button:hover {
-        background-color: #a31518; /* Merah tua */
+        background-color: #a31518;
     }
     .stSelectbox, .stTextInput, .stNumberInput {
         border-radius: 8px;
-        border: 2px solid black; /* Hitam */
+        border: 2px solid black;
     }
     </style>
     """,
