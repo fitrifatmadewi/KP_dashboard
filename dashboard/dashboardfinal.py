@@ -99,7 +99,7 @@ if st.sidebar.button("Simpan Data"):
 tabs = st.tabs(["🔎 Prediksi", "📋 Data Tersimpan", "📈 Analisis Deskriptif", "📊 Visualisasi Data", "👥Tentang Kami"])
 
 with tabs[0]:
-    st.subheader("📌 Hasil Prediksi")
+    st.subheader("🔎 Hasil Prediksi")
     cols_pred = st.columns(2)
     cols_pred[0].metric(label="🧪 Kuat Tekan 1 Hari", value=f"{kuat_tekan_1d:.2f} kg/cm²")
     cols_pred[1].metric(label="🧪 Kuat Tekan 3 Hari", value=f"{kuat_tekan_3d:.2f} kg/cm²")
